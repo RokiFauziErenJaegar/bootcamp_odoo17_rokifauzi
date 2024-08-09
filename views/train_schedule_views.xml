@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_train_schedule_tree" model="ir.ui.view">
+        <field name="name">train.schedule.tree</field>
+        <field name="model">train.schedule</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="origin_id"/>
+                <field name="destination_id"/>
+                <field name="schedule_time"/>
+                <field name="duration"/>
+                <field name="arrival_time"/>
+                <field name="train_id"/>
+                <field name="capacity"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_train_schedule_form" model="ir.ui.view">
+        <field name="name">train.schedule.form</field>
+        <field name="model">train.schedule</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="code"/>
+                    <field name="origin_id"/>
+                    <field name="destination_id"/>
+                    <field name="schedule_time"/>
+                    <field name="duration"/>
+                    <field name="arrival_time"/>
+                    <field name="train_id"/>
+                    <field name="capacity"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_train_schedule_calendar" model="ir.ui.view">
+        <field name="name">train.schedule.calendar</field>
+        <field name="model">train.schedule</field>
+        <field name="arch" type="xml">
+            <calendar string="Train Schedule" date_start="schedule_time" date_stop="arrival_time">
+                <field name="code"/>
+                <field name="train_id"/>
+                <field name="origin_id"/>
+                <field name="destination_id"/>
+            </calendar>
+        </field>
+    </record>
+</odoo>

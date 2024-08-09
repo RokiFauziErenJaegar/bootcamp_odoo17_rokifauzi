@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-
-#from . import models
-from . import training
-from . import product
-from . import partner
+from . import train_city
+from . import train_station
+from . import train_train
+from . import train_schedule
+from . import res_partner

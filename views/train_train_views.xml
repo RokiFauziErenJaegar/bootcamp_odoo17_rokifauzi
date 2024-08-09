@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_train_train_tree" model="ir.ui.view">
+        <field name="name">train.train.tree</field>
+        <field name="model">train.train</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="capacity"/>
+                <field name="state"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_train_train_form" model="ir.ui.view">
+        <field name="name">train.train.form</field>
+        <field name="model">train.train</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="capacity"/>
+                    <field name="state"/>
+                    <field name="active"/>
+                </group>
+                <group>
+                    <field name="schedule_line_ids"/>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

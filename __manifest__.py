@@ -18,24 +18,19 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'mail', 'stock', 'sale_management'],
+    'depends': ['base', 'mail'],
 
     # always loaded
     'data': [
-        'report/report_training_session.xml',
-        'report/report_action.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
-        'data/sequence_data.xml',
-        'data/scheduler_data.xml',
-        #'views/views.xml',
-        #'views/templates.xml',
-        'views/partner_views.xml',
-        'views/training_views.xml',
-        'wizard/training_wizard_views.xml',
         'views/menuitem_views.xml',
-        'data/data.xml',
-        
+        'views/train_city_views.xml',
+        'views/train_station_views.xml',
+        'views/train_train_views.xml',
+        'views/train_schedule_views.xml',
+        'views/res_partner_views.xml',
+        'wizard/train_schedule_wizard_views.xml',
     ],
     # only loaded in demonstration mode
     #'demo': [

@@ -1,26 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<!-- Menu Dashboard -->
-<menuitem id="menu_dashboard_training" name="Training"
-web_icon="odoo_training,static/description/icon.png"/>
+    <menuitem id="menu_train_transportation_root" name="Train Transportation" sequence="10"/>
 
-<!-- Menu Bar Training -->
-<menuitem id="menu_bar_training" name="Training" parent="menu_dashboard_training"/>
+    <menuitem id="menu_train" name="Train" parent="menu_train_transportation_root" sequence="10"/>
+    <menuitem id="menu_train_schedule" name="Schedule" parent="menu_train_transportation_root" sequence="20"/>
 
-<!-- Menu Item -->
-<menuitem id="menu_item_training_course" name="Course" parent="menu_bar_training"
-action="training_course_action"/>
-<menuitem id="menu_item_training_session" name="Session" parent="menu_bar_training"
-action="training_session_action"/>
-<menuitem id="menu_item_training_wizard" name="Add Attendees" parent="menu_bar_training"
-action="training_wizard_menu_list_action"/>
-
-<!-- Menu Bar Konfigurasi -->
-<menuitem id="menu_bar_configuration" name="Configuration"
-parent="menu_dashboard_training"/>
-
-<!-- Menu Item -->
-<menuitem id="menu_item_training_instructor" name="Instructor"
-parent="menu_bar_configuration" action="training_instructor_action"/>
-<menuitem id="menu_item_training_attendee" name="Attendee" parent="menu_bar_configuration"
-action="training_attendee_action"/>
+    <menuitem id="menu_configurations" name="Configurations" parent="menu_train_transportation_root" sequence="30"/>
+    <menuitem id="menu_train_city" name="City" parent="menu_configurations" sequence="10" action="action_train_city"/>
+    <menuitem id="menu_train_station" name="Station" parent="menu_configurations" sequence="20" action="action_train_station"/>
+    <menuitem id="menu_passenger" name="Passenger" parent="menu_configurations" sequence="30" action="action_passenger"/>
+    <menuitem id="menu_machinist" name="Machinist" parent="menu_configurations" sequence="40" action="action_machinist"/>
 </odoo>

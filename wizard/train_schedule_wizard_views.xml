@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_train_schedule_wizard_form" model="ir.ui.view">
+        <field name="name">train.schedule.wizard.form</field>
+        <field name="model">train.schedule.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Schedules">
+                <group>
+                    <field name="train_id"/>
+                    <field name="schedules">
+                        <tree editable="bottom">
+                            <field name="origin_id"/>
+                            <field name="destination_id"/>
+                            <field name="schedule_time"/>
+                            <field name="duration"/>
+                        </tree>
+                    </field>
+                </group>
+                <footer>
+                    <button string="Create" type="object" name="create_schedules" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
